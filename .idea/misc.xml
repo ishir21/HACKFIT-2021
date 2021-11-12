@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ishir/AndroidProjects/HACKFIT-2021/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/AndroidProjects/HACKFIT-2021/app/src/main/res/layout/blog_card_view.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/AndroidProjects/HACKFIT-2021/app/src/main/res/layout/fragment_blogs.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ishir/AndroidProjects/HACKFIT-2021/app/src/main/res/layout/fragment_home.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/tejas/HACKFIT-2021/app/src/main/res/drawable/round_button.xml" value="0.2703125" />
         <entry key="..\:/Users/tejas/HACKFIT-2021/app/src/main/res/drawable/send_round_box.xml" value="0.2703125" />
         <entry key="..\:/Users/tejas/HACKFIT-2021/app/src/main/res/layout/activity_chatbot.xml" value="0.17617753623188406" />

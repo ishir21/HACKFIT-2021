@@ -1,13 +1,10 @@
 package com.example.hackfit2021
 
 import android.annotation.SuppressLint
-import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hackfit2021.R
 import com.example.hackfit2021.data.Message
 import com.example.hackfit2021.utils.Constants.RECEIVE_ID
 import com.example.hackfit2021.utils.Constants.SEND_ID
@@ -20,7 +17,6 @@ class MessagingAdapter: RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>
     inner class MessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         init {
             itemView.setOnClickListener {
-
                 //Remove message on the item clicked
                 messagesList.removeAt(adapterPosition)
                 notifyItemRemoved(adapterPosition)

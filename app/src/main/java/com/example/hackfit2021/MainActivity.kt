@@ -18,30 +18,43 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        bottomNavigationView.menu.getItem(0).isCheckable = true
+        setFragment(HomeFragment())
+        bottomNavigationView.setOnItemSelectedListener { menu ->
 
-        val homeFragment= HomeFragment()
-        val diaryListFragment= DiaryListFragment()
-        val musicListFragment= MusicFragment()
-        val blogsFragment= BlogsFragment()
+            when (menu.itemId) {
 
-        bottomNavigationView.setOnNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.tab_home->setCurrentFragment(homeFragment)
-                R.id.tab_diary->setCurrentFragment(diaryListFragment)
-                R.id.tab_music_list->setCurrentFragment(musicListFragment)
-                R.id.tab_blogs->setCurrentFragment(blogsFragment)
+                R.id.tab_home -> {
+                    setFragment(HomeFragment())
+                    true
+                }
+
+                R.id.tab_diary -> {
+                    setFragment(DiaryListFragment())
+                    true
+                }
+
+                R.id.tab_music_list -> {
+                    setFragment(MusicFragment())
+                    true
+                }
+                R.id.tab_blogs -> {
+                    setFragment(BlogsFragment())
+                    true
+                }
+
+                else -> false
             }
-            true
         }
-        floatingactionbutton.setOnClickListener(){
+        floatingactionbutton.setOnClickListener {
             intent = Intent(applicationContext, ChatBotActivity::class.java)
             startActivity(intent)
         }
     }
-    private fun setCurrentFragment(fragment: Fragment)=
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.container,fragment)
-            commit()
-        }
 
+    private fun setFragment(fr: Fragment) {
+        val frag = supportFragmentManager.beginTransaction()
+        frag.replace(R.id.container, fr)
+        frag.commit()
+    }
 }
