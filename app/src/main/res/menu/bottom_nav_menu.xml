@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    TODO: CHANGE ICONS FROM ONLINE MAYBE-->
+<item
+    android:id="@+id/tab_home"
+    android:icon="@drawable/ic_baseline_home_24"
+    android:title="@string/bottom_nav_home" />
+<item
+    android:id="@+id/tab_diary"
+    android:title="@string/bottom_nav_diary" />
+
+<item
+    android:id="@+id/tab_music_list"
+    android:icon="@drawable/ic_baseline_library_music_24"
+    android:title="@string/bottom_nav_music" />
+<item
+    android:id="@+id/tab_blogs"
+    android:icon="@drawable/ic_baseline_chrome_reader_mode_24"
+    android:title="@string/bottom_nav_blogs" />
+</menu>
