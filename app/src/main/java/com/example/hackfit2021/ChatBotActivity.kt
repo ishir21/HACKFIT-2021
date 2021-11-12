@@ -14,11 +14,10 @@ import com.example.hackfit2021.utils.Constants.OPEN_GOOGLE
 import com.example.hackfit2021.utils.Constants.OPEN_SEARCH
 import com.example.hackfit2021.utils.Time
 import kotlinx.android.synthetic.main.activity_chatbot.*
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.*
 
 class ChatBotActivity : AppCompatActivity() {
-    private val TAG = "MainActivity"
+    private val TAG = "ChatBotActivity"
 
     //You can ignore this messageList if you're coming from the tutorial,
     // it was used only for my personal debugging
@@ -29,14 +28,17 @@ class ChatBotActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_chatbot)
 
         recyclerView()
 
         clickEvents()
 
         val random = (0..3).random()
-        customBotMessage("Hello! Today you're speaking with ${botList[random]}, how may I help?")
+        customBotMessage("Hello! I am ${botList[random]}")
+        customBotMessage("What would you like me to call you?")
+
+
     }
 
     private fun clickEvents() {
