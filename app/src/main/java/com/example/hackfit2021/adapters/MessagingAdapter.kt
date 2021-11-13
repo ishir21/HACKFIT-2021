@@ -1,10 +1,11 @@
-package com.example.hackfit2021
+package com.example.hackfit2021.adapters
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hackfit2021.R
 import com.example.hackfit2021.data.Message
 import com.example.hackfit2021.utils.Constants.RECEIVE_ID
 import com.example.hackfit2021.utils.Constants.SEND_ID

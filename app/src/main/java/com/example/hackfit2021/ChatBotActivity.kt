@@ -5,7 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.hackfit2021.R
+import com.example.hackfit2021.adapters.MessagingAdapter
 import com.example.hackfit2021.data.Message
 import com.example.hackfit2021.utils.Constants.RECEIVE_ID
 import com.example.hackfit2021.utils.Constants.SEND_ID

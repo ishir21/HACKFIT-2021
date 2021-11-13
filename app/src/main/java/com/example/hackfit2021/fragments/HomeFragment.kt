@@ -1,4 +1,4 @@
-package com.example.hackfit2021.Fragments
+package com.example.hackfit2021.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

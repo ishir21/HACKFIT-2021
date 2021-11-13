@@ -1,4 +1,4 @@
-package com.example.hackfit2021.Fragments
+package com.example.hackfit2021.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,14 +8,12 @@ import android.view.ViewGroup
 import com.example.hackfit2021.R
 
 
-class DiaryListFragment : Fragment() {
-
+class MusicFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_diary_list, container, false)
+        return inflater.inflate(R.layout.fragment_music, container, false)
     }
-
 }

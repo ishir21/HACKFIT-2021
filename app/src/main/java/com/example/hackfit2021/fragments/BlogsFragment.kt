@@ -1,4 +1,4 @@
-package com.example.hackfit2021.Fragments
+package com.example.hackfit2021.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,14 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hackfit2021.MainActivity
 import com.example.hackfit2021.R
-import com.example.hackfit2021.blogAdapter
+import com.example.hackfit2021.adapters.BlogAdapter
 import kotlinx.android.synthetic.main.fragment_blogs.*
 
 class BlogsFragment : Fragment() {
     private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<blogAdapter.ViewHolder>? = null
+    private var adapter: RecyclerView.Adapter<BlogAdapter.ViewHolder>? = null
 
     override fun onCreateView(
 
@@ -33,7 +32,7 @@ class BlogsFragment : Fragment() {
             // RecyclerView behavior
             layoutManager = LinearLayoutManager(activity)
             // set the custom adapter to the RecyclerView
-            adapter = blogAdapter()
+            adapter = BlogAdapter()
         }
     }
 
