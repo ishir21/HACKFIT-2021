@@ -1,6 +1,5 @@
 package com.example.hackfit2021.Dao
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.hackfit2021.entities.Rating
 
@@ -18,5 +17,8 @@ interface RatingDao {
 
     @Query("SELECT * FROM Ratings ORDER BY date DESC")
     suspend fun getAllRatings() : List<Rating>
+
+    @Query("SELECT * FROM Ratings WHERE date = :date")
+    suspend fun getRating(date: String)
 
 }
