@@ -1,14 +1,16 @@
 package com.example.hackfit2021
 
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
 import com.example.hackfit2021.fragments.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var navController: NavController
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,14 +23,14 @@ class MainActivity : AppCompatActivity() {
 
             when (menu.itemId) {
 
-                R.id.tab_home -> {
+                R.id.homeFragment -> {
                     floatingactionbutton.show()
                     floatingactionbutton.setImageDrawable(getDrawable(R.drawable.bot_icon))
                     setFragment(HomeFragment())
                     true
                 }
 
-                R.id.tab_diary -> {
+                R.id.diaryListFragment -> {
                     setFragment(DiaryListFragment())
                     floatingactionbutton.show()
                     floatingactionbutton.setImageDrawable(getDrawable(R.drawable.ic_baseline_add_24))
@@ -38,24 +40,17 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
-                R.id.tab_music_list -> {
-                    floatingactionbutton.show()
-                    floatingactionbutton.setImageDrawable(getDrawable(R.drawable.bot_icon))
+                R.id.musicFragment -> {
                     setFragment(MusicFragment())
                     true
                 }
-                R.id.tab_blogs -> {
+                R.id.blogsFragment -> {
                     setFragment(BlogsFragment())
-                    floatingactionbutton.hide()
                     true
                 }
 
                 else -> false
             }
-        }
-        floatingactionbutton.setOnClickListener {
-            intent = Intent(applicationContext, ChatBotActivity::class.java)
-            startActivity(intent)
         }
     }
 
@@ -73,5 +68,4 @@ class MainActivity : AppCompatActivity() {
         }
         fragmentTransition.replace(R.id.container,fragment).addToBackStack(fragment.javaClass.simpleName).commit()
     }
-
 }

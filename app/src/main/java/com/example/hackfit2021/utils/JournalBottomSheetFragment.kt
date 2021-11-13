@@ -39,7 +39,7 @@ class JournalBottomSheetFragment : BottomSheetDialogFragment() {
         val behavior = param.behavior
 
         if (behavior is BottomSheetBehavior<*>){
-            behavior.setBottomSheetCallback(object  : BottomSheetBehavior.BottomSheetCallback(){
+            behavior.removeBottomSheetCallback(object  : BottomSheetBehavior.BottomSheetCallback(){
                 override fun onSlide(bottomSheet: View, slideOffset: Float) {
                     TODO("Not yet implemented")
                 }
@@ -66,6 +66,9 @@ class JournalBottomSheetFragment : BottomSheetDialogFragment() {
                             behavior.state = BottomSheetBehavior.STATE_COLLAPSED
                         }
 
+                        BottomSheetBehavior.STATE_HALF_EXPANDED -> {
+                            TODO()
+                        }
                     }
                 }
 

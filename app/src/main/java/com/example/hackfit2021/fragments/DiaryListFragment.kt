@@ -1,16 +1,24 @@
 package com.example.hackfit2021.fragments
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.SearchView
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.hackfit2021.ChatBotActivity
+import com.example.hackfit2021.MainActivity
 import com.example.hackfit2021.adapters.JournalsAdapter
 import com.example.hackfit2021.R
 import com.example.hackfit2021.database.JournalsDatabase
 import com.example.hackfit2021.entities.Journals
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_diary_list.*
 import kotlinx.coroutines.launch
 import java.util.*
@@ -36,6 +44,15 @@ class DiaryListFragment : BaseFragment() {
 
         return inflater.inflate(R.layout.fragment_diary_list, container, false)
 
+    }
+    override fun onResume() {
+        super.onResume()
+        val mainActivity = activity as MainActivity?
+        mainActivity?.floatingactionbutton?.show()
+        mainActivity?.bottomNavigationView?.visibility = View.VISIBLE
+        mainActivity?.floatingactionbutton?.setImageResource(R.drawable.ic_baseline_add_24)
+        mainActivity?.floatingactionbutton?.setOnClickListener {
+            replaceFragment(CreateNewJournalFragment.newInstance(),false)        }
     }
 
     companion object {
@@ -84,6 +101,17 @@ class DiaryListFragment : BaseFragment() {
                 return true
             }
 
+        })
+        // hides keyboard when scrolled and removes focus from the searchView
+        recycler_view.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                if (newState == RecyclerView.SCROLL_STATE_DRAGGING) {
+                    val imm =
+                        activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    imm.hideSoftInputFromWindow(recyclerView.windowToken, 0)
+                }
+            }
         })
     }
 

@@ -17,11 +17,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import com.example.hackfit2021.MainActivity
 import com.example.hackfit2021.R
 import com.example.hackfit2021.database.JournalsDatabase
 import com.example.hackfit2021.entities.Journals
 import com.example.hackfit2021.utils.JournalBottomSheetFragment
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_create_journal.*
 import kotlinx.android.synthetic.main.fragment_create_journal.layoutImage
 import kotlinx.android.synthetic.main.fragment_create_journal.layoutWebUrl
@@ -436,7 +439,19 @@ class CreateNewJournalFragment : BaseFragment(), EasyPermissions.PermissionCallb
     override fun onRationaleAccepted(requestCode: Int) {
 
     }
+//    override fun onResume() {
+//        super.onResume()
+//        val mainActivity = activity as MainActivity?
+//        mainActivity?.bottomNavigationView?.visibility = View.INVISIBLE
+//    }
+    fun replaceFragment(fragment: Fragment, istransition:Boolean){
+        val fragmentTransition = requireActivity().supportFragmentManager.beginTransaction()
 
+        if (istransition){
+            fragmentTransition.setCustomAnimations(android.R.anim.slide_out_right,android.R.anim.slide_in_left)
+        }
+        fragmentTransition.replace(R.id.container,fragment).addToBackStack(fragment.javaClass.simpleName).commit()
+    }
 
 }
 

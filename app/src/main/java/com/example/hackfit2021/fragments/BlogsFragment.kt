@@ -1,5 +1,6 @@
 package com.example.hackfit2021.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,8 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hackfit2021.ChatBotActivity
+import com.example.hackfit2021.MainActivity
 import com.example.hackfit2021.R
 import com.example.hackfit2021.adapters.BlogAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_blogs.*
 
 class BlogsFragment : Fragment() {
@@ -35,5 +39,9 @@ class BlogsFragment : Fragment() {
             adapter = BlogAdapter()
         }
     }
-
-}
+    override fun onResume() {
+        super.onResume()
+        val mainActivity = activity as MainActivity?
+        mainActivity?.floatingactionbutton?.hide()
+        }
+    }
