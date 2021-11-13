@@ -19,6 +19,6 @@ interface RatingDao {
     suspend fun getAllRatings() : List<Rating>
 
     @Query("SELECT * FROM Ratings WHERE date = :date")
-    suspend fun getRating(date: String)
+    suspend fun getRating(date: String):Rating
 
 }
