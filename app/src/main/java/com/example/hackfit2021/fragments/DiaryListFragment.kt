@@ -10,9 +10,9 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.SearchView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.hackfit2021.MainActivity
 import com.example.hackfit2021.adapters.JournalsAdapter
 import com.example.hackfit2021.R
+import com.example.hackfit2021.activities.MainActivity
 import com.example.hackfit2021.database.JournalsDatabase
 import com.example.hackfit2021.entities.Journals
 import kotlinx.android.synthetic.main.activity_main.*
@@ -137,6 +137,5 @@ class DiaryListFragment : BaseFragment() {
         }
         fragmentTransition.replace(R.id.container,fragment).addToBackStack(fragment.javaClass.simpleName).commit()
     }
-
 
 }

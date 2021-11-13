@@ -6,12 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
-import com.example.hackfit2021.ChatBotActivity
-import com.example.hackfit2021.MainActivity
+import com.example.hackfit2021.activities.ChatBotActivity
 import com.example.hackfit2021.R
 import kotlinx.android.synthetic.main.activity_main.*
+import com.example.hackfit2021.activities.MainActivity as MainActivity
 
 
 class MusicFragment : Fragment() {

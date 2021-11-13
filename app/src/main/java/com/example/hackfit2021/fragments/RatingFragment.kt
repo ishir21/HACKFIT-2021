@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import com.example.hackfit2021.R
 import com.example.hackfit2021.Model.RatingViewModel
 import com.example.hackfit2021.Model.RatingViewModelFactory
@@ -20,60 +20,15 @@ class RatingsFragment : Fragment() {
 
     private lateinit var viewModel: RatingViewModel
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-//        viewModel = ViewModelProviders.of(
-//            this, RatingViewModelFactory(
-//                JournalsDatabase.getDatabase(
-//                    requireActivity()
-//                )
-//            )
-//        ).get(RatingViewModel::class.java)
-//
-//        val sdf = SimpleDateFormat("dd/MM/yyyy")
-//        val currentDate = sdf.format(Date()).toString()
-//
-//        great_card_rating.setOnClickListener {
-//            viewModel.insert(5,currentDate)
-//            Log.d("RatingsFragment", "${viewModel.ratingsList.value}")
-//        }
-//
-//        good_card_rating.setOnClickListener {
-//            viewModel.insert(4,currentDate)
-//            Log.d("RatingsFragment", "${viewModel.ratingsList.value}")
-//        }
-//
-//        ok_card_rating.setOnClickListener {
-//            viewModel.insert(3,currentDate)
-//            Log.d("RatingsFragment", "${viewModel.ratingsList.value}")
-//        }
-//
-//        bad_card_rating.setOnClickListener {
-//            viewModel.insert(2,currentDate)
-//            Log.d("RatingsFragment", "${viewModel.ratingsList.value}")
-//        }
-//
-//        terrible_card_rating.setOnClickListener {
-//            viewModel.insert(1,currentDate)
-//            Log.d("RatingsFragment", "${viewModel.ratingsList.value}")
-//        }
-//
-//        viewModel.ratingsList.observe(viewLifecycleOwner) { ratings ->
-//            Log.d("RatingsFragment", "$ratings")
-//        }
-
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProviders.of(
+        viewModel = ViewModelProvider(
             this, RatingViewModelFactory(
                 JournalsDatabase.getDatabase(
                     requireActivity()
                 )
             )
-        ).get(RatingViewModel::class.java)
+        )[RatingViewModel::class.java]
 
         val sdf = SimpleDateFormat("dd/MM/yyyy")
         val currentDate = sdf.format(Date()).toString()

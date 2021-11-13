@@ -6,14 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import androidx.cardview.widget.CardView
-import com.example.hackfit2021.ChatBotActivity
+import com.example.hackfit2021.activities.ChatBotActivity
 import com.example.hackfit2021.R
-import com.example.hackfit2021.MainActivity
+import com.example.hackfit2021.activities.BlogsActivity
+import com.example.hackfit2021.activities.MainActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.*
-import ru.cleverpumpkin.calendar.CalendarView
 
 
 class HomeFragment : Fragment() {
@@ -22,9 +20,6 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        val cardView = view?.findViewById(R.id.layout) as LinearLayout
-
-
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
 
@@ -46,6 +41,10 @@ class HomeFragment : Fragment() {
         //Initialize
         home_check_in_card.setOnClickListener {
             replaceFragment(CalendarFragment(), false)
+        }
+            home_blogs_card.setOnClickListener {
+                val intent = Intent(context, BlogsActivity::class.java)
+                startActivity(intent)
         }
     }
     private fun replaceFragment(fragment:Fragment, istransition:Boolean){
