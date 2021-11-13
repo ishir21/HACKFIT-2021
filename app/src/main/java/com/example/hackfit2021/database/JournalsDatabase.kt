@@ -5,10 +5,12 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.hackfit2021.Dao.JournalDao
+import com.example.hackfit2021.Dao.RatingDao
 import com.example.hackfit2021.entities.Journals
+import com.example.hackfit2021.entities.Rating
 
 
-@Database(entities = [Journals::class], version = 1, exportSchema = false)
+@Database(entities = [Journals::class, Rating::class], version = 2, exportSchema = false)
 abstract class JournalsDatabase : RoomDatabase() {
 
     companion object {
@@ -21,11 +23,15 @@ abstract class JournalsDatabase : RoomDatabase() {
                     context
                     , JournalsDatabase::class.java
                     , "journals.db"
-                ).build()
+                )
+                    .fallbackToDestructiveMigration()
+                    .build()
             }
             return journalsDatabase!!
         }
     }
 
     abstract fun journalDao():JournalDao
+    abstract fun ratingsDao() : RatingDao
+
 }

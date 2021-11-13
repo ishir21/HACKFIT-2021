@@ -1,5 +1,6 @@
 package com.example.hackfit2021.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,8 +31,12 @@ class BlogAdapter: RecyclerView.Adapter<BlogAdapter.ViewHolder>() {
         var itemDescription: TextView
 
         init{
+
             itemTitle = itemView.findViewById(R.id.item_title)
             itemDescription = itemView.findViewById(R.id.item_description)
         }
+        private val mOnClickListener: View.OnClickListener = View.OnClickListener { v ->
+        }
+
     }
 }

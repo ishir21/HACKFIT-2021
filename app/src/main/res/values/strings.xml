@@ -8,4 +8,10 @@
     <string name="bottom_nav_blogs">Blogs</string>
     <string name="journal_title">Title</string>
     <string name="storage_permission_text">This app needs access to your storage.</string>
+    <string name="great_text">Great!</string>
+    <string name="how_feel">How do you feel today?</string>
+    <string name="good_text">Good</string>
+    <string name="ok_text">Ok</string>
+    <string name="bad_text">Bad</string>
+    <string name="terrible_text">Terrible</string>
 </resources>

@@ -5,13 +5,10 @@ package com.example.hackfit2021
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
 import com.example.hackfit2021.fragments.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var navController: NavController
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +38,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.musicFragment -> {
-                    setFragment(MusicFragment())
+//                    setFragment(MusicFragment())
+                    setFragment(RatingsFragment())
                     true
                 }
                 R.id.blogsFragment -> {

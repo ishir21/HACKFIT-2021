@@ -18,17 +18,24 @@
         <entry key="app/src/main/res/drawable/note_color_5.xml" value="0.21875" />
         <entry key="app/src/main/res/drawable/note_color_6.xml" value="0.21875" />
         <entry key="app/src/main/res/drawable/note_color_7.xml" value="0.21875" />
+        <entry key="app/src/main/res/drawable/rating_card_bg.xml" value="0.14166666666666666" />
         <entry key="app/src/main/res/font/manrope_bold.xml" value="0.21354166666666666" />
         <entry key="app/src/main/res/layout/activity.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_chatbot.xml" value="0.2557291666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.29483695652173914" />
+        <entry key="app/src/main/res/layout/example_recycler.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_blogs.xml" value="0.18333333333333332" />
+        <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.20260416666666667" />
         <entry key="app/src/main/res/layout/fragment_create_journal.xml" value="0.39037854889589907" />
         <entry key="app/src/main/res/layout/fragment_diary_list.xml" value="0.36302083333333335" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.17603850050658562" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_music.xml" value="0.20260416666666667" />
         <entry key="app/src/main/res/layout/fragment_notes_bottom_sheet.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/fragment_ratings.xml" value="0.12968591691995948" />
         <entry key="app/src/main/res/layout/item_rv_notes.xml" value="0.2578125" />
-        <entry key="app/src/main/res/layout/message_item.xml" value="0.20260416666666667" />
+        <entry key="app/src/main/res/layout/message_item.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/myquote_lis_item.xml" value="0.13768115942028986" />
+        <entry key="app/src/main/res/layout/myquote_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/note_editor.xml" value="0.36302083333333335" />
         <entry key="app/src/main/res/layout/notes_activity.xml" value="0.36302083333333335" />
         <entry key="app/src/main/res/menu/add_diary_menu.xml" value="0.36302083333333335" />
