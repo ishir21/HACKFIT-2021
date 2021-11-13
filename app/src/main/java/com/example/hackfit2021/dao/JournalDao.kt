@@ -1,25 +1,24 @@
 package com.example.hackfit2021.Dao
 
 import androidx.room.*
-import com.example.hackfit2021.entities.Journals
+import com.example.hackfit2021.entities.Rating
 
 @Dao
-interface JournalDao {
-    @Query("SELECT * FROM Journals ORDER BY id DESC")
-    suspend fun getAllJournals() : List<Journals>
-
-    @Query("SELECT * FROM Journals WHERE id =:id")
-    suspend fun getSpecificJournal(id:Int) : Journals
+interface RatingDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertJournal(journal:Journals)
-
-    @Delete
-    suspend fun deleteJournal(journal:Journals)
-
-    @Query("DELETE FROM Journals WHERE id =:id")
-    suspend fun deleteSpecificJournal(id:Int)
+    suspend fun insertRating(rating: Rating)
 
     @Update
-    suspend fun updateJournal(journal:Journals)
+    suspend fun updateRating(rating: Rating)
+
+    @Delete
+    suspend fun deleteRating(rating: Rating)
+
+    @Query("SELECT * FROM Ratings ORDER BY date DESC")
+    suspend fun getAllRatings() : List<Rating>
+
+    @Query("SELECT * FROM Ratings WHERE date = :date")
+    suspend fun getRating(date: String):Rating
+
 }
