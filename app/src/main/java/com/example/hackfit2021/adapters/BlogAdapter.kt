@@ -7,12 +7,20 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hackfit2021.R
+<<<<<<< HEAD
 import com.example.hackfit2021.entities.Blog
+=======
+import com.example.hackfit2021.data.Blog
+>>>>>>> 26ffd8e090403c222f611d13dedcc63df0137eb5
 
 import kotlinx.android.synthetic.main.blog_card_view.view.*
 
 class BlogAdapter(private val bloglist:ArrayList<Blog>): RecyclerView.Adapter<BlogAdapter.MyViewHolder>() {
+<<<<<<< HEAD
     //    private var titles = arrayOf("Blog 1","Blog 2","Blog 3","Blog 4","Blog 5")
+=======
+//    private var titles = arrayOf("Blog 1","Blog 2","Blog 3","Blog 4","Blog 5")
+>>>>>>> 26ffd8e090403c222f611d13dedcc63df0137eb5
     private lateinit var mListener : onItemClickListener
     interface onItemClickListener{
         fun onItemClick(position: Int)
@@ -47,6 +55,7 @@ class BlogAdapter(private val bloglist:ArrayList<Blog>): RecyclerView.Adapter<Bl
         val tvHeading: TextView = itemView.findViewById(R.id.item_title);
         init{
             itemView.setOnClickListener {
+<<<<<<< HEAD
                 listener.onItemClick(absoluteAdapterPosition)
             }
 
@@ -56,3 +65,14 @@ class BlogAdapter(private val bloglist:ArrayList<Blog>): RecyclerView.Adapter<Bl
 
 
 }
+=======
+                listener.onItemClick(adapterPosition)
+            }
+
+        }
+
+        }
+
+
+}
+>>>>>>> 26ffd8e090403c222f611d13dedcc63df0137eb5

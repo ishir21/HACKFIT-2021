@@ -14,10 +14,13 @@
     <string name="ok_text">Ok</string>
     <string name="bad_text">Bad</string>
     <string name="terrible_text">Terrible</string>
+<<<<<<< HEAD
     <string name="activities_text">Activities</string>
     <string name="breathing_description">Description for breathing - something huge</string>
     <string name="settings">settings</string>
 
+=======
+>>>>>>> 26ffd8e090403c222f611d13dedcc63df0137eb5
     <string name="blog_1">Anxiety and depression are two of the most common mental health conditions we see. And though they’re frequently confused, they’re actually different classes of disorders. Some of the confusion stems from an overlap in symptoms and in the fact that they often co-occur. But despite sharing some symptoms, there is a significant difference between anxiety and depression in the actual definition of each condition.
 
 On a high level, anxiety involves excessive worrying or stress about the outcome of a situation. Depression, on the other hand, is a mood disorder that causes overwhelming feelings of sadness or apathy.
@@ -34,6 +37,7 @@ While there are many common symptoms between anxiety and depression — such as 
 Anxiety and depression also fall into different classifications of disorders. Anxiety is its own class, and depression is a separate mood disorder. Finally, another difference between the two conditions is that they’re sometimes treated with different medications.
 
 To best understand the differences listed above, it’s important to review these disorders in-depth.</string>
+<<<<<<< HEAD
     <string name="blog_2">
         For some people, an ideal therapy experience doesn’t necessarily mean consulting a professional, answering questions that’ll help them determine what’s wrong, and listening to another person advise  them on how to work through their struggles. Therapy can also involve a more humanistic approach, where your therapist merely guides your journey of self-discovery and supports you in finding the answers you’ve been seeking. After all, you’re the expert on your own life.
 
@@ -123,4 +127,6 @@ I know it might seem odd to think that people with bipolar disorder think they d
 
 As for people without bipolar disorder, they can look down upon people with bipolar disorder primarily for two reasons: societal prejudice (stigma) against mental illness and negative personal experiences. As I said, we all grow up in the same society and while many of us realize that prejudice against those with bipolar disorder is wrong, some people internalize the prejudice and are either fine with it or don’t even know it. Ask someone if they want to be in a relationship with a person with bipolar disorder, however, you will learn the truth. That one medical issue can make a person undesirable. And as for negative personal issues, that can happen with anyone, but when the negative experience happens with a person with bipolar disorder, the bipolar disorder tends to be blamed whether the mental illness has anything to do with it or not.
     </string>
+=======
+>>>>>>> 26ffd8e090403c222f611d13dedcc63df0137eb5
 </resources>

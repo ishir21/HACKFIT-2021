@@ -3,8 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="app/src/main/res/drawable/bg_circle_inner.xml" value="0.17592592592592593" />
         <entry key="app/src/main/res/drawable/bg_circle_outer.xml" value="0.17592592592592593" />
+=======
+        <entry key="..\:/Users/ishir/AndroidProjects/HACKFIT-2021/app/src/main/res/layout/activity_blog_data.xml" value="0.2" />
+        <entry key="..\:/Users/ishir/AndroidProjects/HACKFIT-2021/app/src/main/res/layout/activity_blogs.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/ishir/AndroidProjects/HACKFIT-2021/app/src/main/res/layout/activity_splash.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/ishir/AndroidProjects/HACKFIT-2021/app/src/main/res/layout/blog_card_view.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/ishir/AndroidProjects/HACKFIT-2021/app/src/main/res/layout/fragment_blogs.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/ishir/AndroidProjects/HACKFIT-2021/app/src/main/res/layout/fragment_home.xml" value="0.11354166666666667" />
+>>>>>>> 26ffd8e090403c222f611d13dedcc63df0137eb5
         <entry key="app/src/main/res/drawable/bottom_nav_b.xml" value="0.15989583333333332" />
         <entry key="app/src/main/res/drawable/ic_back.xml" value="0.27395833333333336" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.19947916666666668" />

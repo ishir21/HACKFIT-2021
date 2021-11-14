@@ -1,10 +1,7 @@
-package com.example.hackfit2021.Dao
+package com.example.hackfit2021.dao
 
-import androidx.room.*
-import com.example.hackfit2021.entities.Rating
-
-@Dao
 interface RatingDao {
+<<<<<<< HEAD
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertRating(rating: Rating)
@@ -21,4 +18,6 @@ interface RatingDao {
     @Query("SELECT * FROM Ratings WHERE date = :date")
     suspend fun getRating(date: String) : Rating
 
+=======
+>>>>>>> 26ffd8e090403c222f611d13dedcc63df0137eb5
 }
