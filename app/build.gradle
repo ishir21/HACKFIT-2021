@@ -88,6 +88,8 @@ dependencies {
 
     // custom calendar
     implementation 'ru.cleverpumpkin:crunchycalendar:2.2.0'
+    implementation 'com.applandeo:material-calendar-view:1.9.0-rc03'
 
-
+    //gif library
+    implementation "pl.droidsonroids.gif:android-gif-drawable:1.2.18"
 }

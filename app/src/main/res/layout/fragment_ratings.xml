@@ -22,11 +22,11 @@
 
     <TextView
         android:id="@+id/date_rating"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="November 13th"
         android:layout_below="@+id/title_rating"
-        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:text=""
         android:textAlignment="center" />
 
     <com.google.android.material.card.MaterialCardView

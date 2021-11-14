@@ -44,8 +44,8 @@ class MainActivity : AppCompatActivity() {
                     setFragment(MusicFragment())
                     true
                 }
-                R.id.blogsFragment -> {
-                    replaceFragment(BlogsFragment(),false)
+                R.id.settingsFragment -> {
+                    replaceFragment(SettingsFragment(),false)
                     true
                 }
 

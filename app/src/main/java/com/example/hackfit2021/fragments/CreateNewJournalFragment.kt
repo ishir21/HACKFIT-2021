@@ -129,8 +129,6 @@ class CreateNewJournalFragment : BaseFragment(), EasyPermissions.PermissionCallb
         }
 
         imgMore.setOnClickListener{
-
-
             val noteBottomSheetFragment = JournalBottomSheetFragment.newInstance(journalId)
             noteBottomSheetFragment.show(requireActivity().supportFragmentManager,"Note Bottom Sheet Fragment")
         }
@@ -194,7 +192,7 @@ class CreateNewJournalFragment : BaseFragment(), EasyPermissions.PermissionCallb
                 layoutImage.visibility = View.GONE
                 imgNote.visibility = View.GONE
                 tvWebLink.visibility = View.GONE
-                requireActivity().supportFragmentManager.popBackStack()
+                replaceFragment(DiaryListFragment(),false)
             }
         }
     }
@@ -231,7 +229,7 @@ class CreateNewJournalFragment : BaseFragment(), EasyPermissions.PermissionCallb
                     layoutImage.visibility = View.GONE
                     imgNote.visibility = View.GONE
                     tvWebLink.visibility = View.GONE
-                    requireActivity().supportFragmentManager.popBackStack()
+                    replaceFragment(DiaryListFragment(),false)
                 }
             }
         }

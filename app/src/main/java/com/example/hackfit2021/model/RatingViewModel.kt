@@ -10,6 +10,9 @@ class RatingViewModel(val database: JournalsDatabase): ViewModel() {
     private val _ratingsList: MutableLiveData<List<Rating>> =MutableLiveData()
     val ratingsList : LiveData<List<Rating>> = _ratingsList
 
+    private val _ratings: MutableLiveData<Rating> =MutableLiveData()
+    val ratings : LiveData<Rating> = _ratings
+
     fun insert(rating:Int,date:String) = viewModelScope.launch{
         database.ratingsDao().insertRating(Rating(rating, date))
         getAllRatings()
@@ -27,7 +30,10 @@ class RatingViewModel(val database: JournalsDatabase): ViewModel() {
         val ratings = database.ratingsDao().getAllRatings()
         _ratingsList.postValue(ratings)
     }
-
+    fun getRating(date:String) = viewModelScope.launch {
+        val ratings = database.ratingsDao().getRating(date)
+        _ratings.postValue(ratings)
+    }
 }
 
 class RatingViewModelFactory(

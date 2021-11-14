@@ -7,6 +7,7 @@
     android:title="@string/bottom_nav_home" />
 <item
     android:id="@+id/diaryListFragment"
+    android:icon="@drawable/ic_baseline_menu_book_24"
     android:title="@string/bottom_nav_diary" />
 
 <item
@@ -14,7 +15,7 @@
     android:icon="@drawable/ic_baseline_library_music_24"
     android:title="@string/bottom_nav_music" />
 <item
-    android:id="@+id/blogsFragment"
-    android:icon="@drawable/ic_baseline_chrome_reader_mode_24"
-    android:title="@string/bottom_nav_blogs" />
+    android:id="@+id/settingsFragment"
+    android:icon="@drawable/ic_baseline_settings_24"
+    android:title="@string/settings" />
 </menu>

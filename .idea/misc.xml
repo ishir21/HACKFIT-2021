@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bg_circle_inner.xml" value="0.17592592592592593" />
+        <entry key="app/src/main/res/drawable/bg_circle_outer.xml" value="0.17592592592592593" />
         <entry key="app/src/main/res/drawable/bottom_nav_b.xml" value="0.15989583333333332" />
         <entry key="app/src/main/res/drawable/ic_back.xml" value="0.27395833333333336" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.19947916666666668" />
@@ -11,6 +13,9 @@
         <entry key="app/src/main/res/drawable/ic_link.xml" value="0.19947916666666668" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.2125" />
         <entry key="app/src/main/res/drawable/ic_tick.xml" value="0.2125" />
+        <entry key="app/src/main/res/drawable/music.xml" value="0.2734375" />
+        <entry key="app/src/main/res/drawable/music_logo.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/next.xml" value="0.2734375" />
         <entry key="app/src/main/res/drawable/note_color_1.xml" value="0.21875" />
         <entry key="app/src/main/res/drawable/note_color_2.xml" value="0.21875" />
         <entry key="app/src/main/res/drawable/note_color_3.xml" value="0.21875" />
@@ -18,23 +23,33 @@
         <entry key="app/src/main/res/drawable/note_color_5.xml" value="0.21875" />
         <entry key="app/src/main/res/drawable/note_color_6.xml" value="0.21875" />
         <entry key="app/src/main/res/drawable/note_color_7.xml" value="0.21875" />
+        <entry key="app/src/main/res/drawable/play.xml" value="0.2734375" />
+        <entry key="app/src/main/res/drawable/play_logo.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/rating_card_bg.xml" value="0.14166666666666666" />
         <entry key="app/src/main/res/font/manrope_bold.xml" value="0.21354166666666666" />
         <entry key="app/src/main/res/layout/activity.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_blog_data.xml" value="0.16875" />
         <entry key="app/src/main/res/layout/activity_blogs.xml" value="0.25625" />
+        <entry key="app/src/main/res/layout/activity_breathing.xml" value="0.13148148148148148" />
         <entry key="app/src/main/res/layout/activity_chatbot.xml" value="0.2557291666666667" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.29483695652173914" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_tasks.xml" value="0.13148148148148148" />
+        <entry key="app/src/main/res/layout/blog_card_view.xml" value="0.1" />
         <entry key="app/src/main/res/layout/example_recycler.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_blogs.xml" value="0.18333333333333332" />
         <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.20260416666666667" />
         <entry key="app/src/main/res/layout/fragment_create_journal.xml" value="0.39037854889589907" />
-        <entry key="app/src/main/res/layout/fragment_diary_list.xml" value="0.36302083333333335" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_diary_list.xml" value="0.11224489795918367" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.13253012048192772" />
+        <entry key="app/src/main/res/layout/fragment_journals_bottom_sheet.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_music.xml" value="0.20260416666666667" />
         <entry key="app/src/main/res/layout/fragment_notes_bottom_sheet.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/fragment_ratings.xml" value="0.12968591691995948" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.20885416666666667" />
         <entry key="app/src/main/res/layout/item_rv_notes.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/message_item.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/music_card_view.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/music_player_activity.xml" value="0.33" />
         <entry key="app/src/main/res/layout/myquote_lis_item.xml" value="0.13768115942028986" />
         <entry key="app/src/main/res/layout/myquote_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/note_editor.xml" value="0.36302083333333335" />

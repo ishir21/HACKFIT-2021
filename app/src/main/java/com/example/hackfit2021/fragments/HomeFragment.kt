@@ -6,10 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.hackfit2021.activities.ChatBotActivity
 import com.example.hackfit2021.R
-import com.example.hackfit2021.activities.BlogsActivity
-import com.example.hackfit2021.activities.MainActivity
+import com.example.hackfit2021.activities.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -43,10 +41,17 @@ class HomeFragment : Fragment() {
             replaceFragment(CalendarFragment(), false)
         }
             home_blogs_card.setOnClickListener {
-                val intent = Intent(context, BlogsActivity::class.java)
+                val intent = Intent(context, BlogDataActivity::class.java)
                 startActivity(intent)
+            }
+                home_activities_card.setOnClickListener {
+                    val intent = Intent(context, TasksActivity::class.java)
+                    startActivity(intent)
         }
-    }
+        home_new_journal_card.setOnClickListener {
+            replaceFragment(CreateNewJournalFragment.newInstance(),false)        }
+        }
+
     private fun replaceFragment(fragment:Fragment, istransition:Boolean){
         val fragmentTransition = requireActivity().supportFragmentManager.beginTransaction()
 

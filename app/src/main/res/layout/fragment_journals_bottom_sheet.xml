@@ -10,7 +10,7 @@
     app:behavior_peekHeight="40dp"
     app:layout_behavior="@string/bottom_sheet_behavior"
     android:background="@color/colorPrimary"
-    tools:context=".activities.MainActivity">
+    tools:context=".fragments.DiaryListFragment">
 
 
 
@@ -187,19 +187,6 @@
             android:layout_marginEnd="10dp"
             app:tint="@color/ColorWhite" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/etNoteTitle"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:textColor="@color/ColorWhite"
-            android:textSize="12dp"
-            android:text="Add Image"
-            android:fontFamily="@font/manrope_bold"
-            android:maxLines="1"
-            android:ellipsize="end"
-            />
 
     </LinearLayout>
 

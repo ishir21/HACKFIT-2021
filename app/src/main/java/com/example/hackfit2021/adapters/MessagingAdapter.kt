@@ -17,11 +17,11 @@ class MessagingAdapter: RecyclerView.Adapter<MessagingAdapter.MessageViewHolder>
 
     inner class MessageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         init {
-            itemView.setOnClickListener {
-                //Remove message on the item clicked
-                messagesList.removeAt(adapterPosition)
-                notifyItemRemoved(adapterPosition)
-            }
+//            itemView.setOnClickListener {
+//                //Remove message on the item clicked
+//                messagesList.removeAt(adapterPosition)
+//                notifyItemRemoved(adapterPosition)
+//            }
         }
     }
 

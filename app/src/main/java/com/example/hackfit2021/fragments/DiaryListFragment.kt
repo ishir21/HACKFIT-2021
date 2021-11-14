@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.SearchView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.hackfit2021.adapters.JournalsAdapter
@@ -38,7 +39,6 @@ class DiaryListFragment : BaseFragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-
         return inflater.inflate(R.layout.fragment_diary_list, container, false)
 
     }
@@ -63,11 +63,8 @@ class DiaryListFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        recycler_view.setHasFixedSize(true)
-
-        recycler_view.layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
-
+        val recyclerLayoutManager = LinearLayoutManager(activity)
+        recycler_view.layoutManager = recyclerLayoutManager
         launch {
             context?.let {
                 val journals = JournalsDatabase.getDatabase(it).journalDao().getAllJournals()
@@ -136,6 +133,11 @@ class DiaryListFragment : BaseFragment() {
             fragmentTransition.setCustomAnimations(android.R.anim.slide_out_right,android.R.anim.slide_in_left)
         }
         fragmentTransition.replace(R.id.container,fragment).addToBackStack(fragment.javaClass.simpleName).commit()
+    }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        val imm = requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(requireView().windowToken, 0)
     }
 
 }
