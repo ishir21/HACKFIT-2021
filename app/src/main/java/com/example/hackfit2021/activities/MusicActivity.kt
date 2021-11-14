@@ -132,6 +132,7 @@ class MusicActivity : AppCompatActivity() {
         mp.isLooping = true
     }
     private fun playAudio(){
+//        val audioURL = "https://files.musopen.org/recordings/8476ae47-3751-4a07-a6db-a602e9dc5ffd.mp3?filename=Nocturne+in+B+flat+minor,+Op.+9+no.+1.mp3"
         mediaPlayer =  MediaPlayer()
         mediaPlayer!!.setAudioStreamType(AudioManager.STREAM_MUSIC)
         try{

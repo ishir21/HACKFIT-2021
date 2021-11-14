@@ -1,5 +1,6 @@
 package com.example.hackfit2021.fragments
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -12,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.hackfit2021.R
 import com.example.hackfit2021.Model.RatingViewModel
 import com.example.hackfit2021.Model.RatingViewModelFactory
+import com.example.hackfit2021.activities.TemplateActivity
 import com.example.hackfit2021.database.JournalsDatabase
 import kotlinx.android.synthetic.main.fragment_ratings.*
 import java.text.SimpleDateFormat
@@ -63,12 +65,14 @@ class RatingsFragment : Fragment() {
         bad_card_rating.setOnClickListener {
             viewModel.insert(2,currentDate)
             Log.d("RatingsFragment", "${viewModel.ratingsList.value}")
+            startActivity(Intent(activity, TemplateActivity::class.java))
             replaceFragment(HomeFragment(),false)
         }
 
         terrible_card_rating.setOnClickListener {
             viewModel.insert(1,currentDate)
             Log.d("RatingsFragment", "${viewModel.ratingsList.value}")
+            startActivity(Intent(activity, TemplateActivity::class.java))
             replaceFragment(HomeFragment(),false)
         }
 
